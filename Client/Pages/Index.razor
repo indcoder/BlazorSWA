@@ -1,7 +1,21 @@
 ﻿@page "/"
+@using System.Net.Http
+@inject HttpClient http
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Hello, @name </h1>
 
-Welcome to your new app.
+Welcome to your new app
+
+@code {
+
+    private string? name = "duniya1";
+    /* Call API function message to get name */
+    protected override async Task OnInitializedAsync()
+    {
+      name = await http.GetStringAsync($"/api/message?name={name}");  
+    }
+}
+
+

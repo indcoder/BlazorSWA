@@ -6,9 +6,22 @@ _site/
 _themes*/
 _repo.*/
 .vs/
-.vscode/
+
 .idea
 .ionide/
 .openpublishing.buildcore.ps1.vscode/
 *.DS_Store
 *.lnk
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
